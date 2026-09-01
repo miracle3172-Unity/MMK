@@ -17,8 +17,14 @@ return function(config, components)
     ScreenGui.ResetOnSpawn = false
     ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     ScreenGui.DisplayOrder = 999
-    pcall(function() ScreenGui.Parent = game:GetService("CoreGui") end)
-    if not ScreenGui.Parent then ScreenGui.Parent = lp:WaitForChild("PlayerGui") end
+    -- Memaksa UI muncul menggunakan gethui() bawaan eksekutor atau langsung ke PlayerGui
+    local parentTujuan
+    if pcall(gethui) and gethui() then
+        parentTujuan = gethui()
+    else
+        parentTujuan = lp:WaitForChild("PlayerGui")
+    end
+    ScreenGui.Parent = parentTujuan
     view.ScreenGui = ScreenGui
 
     local function label(opts)
