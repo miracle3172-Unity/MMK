@@ -6,8 +6,7 @@ local BASE_URL = ...
 
 -- Derive the LyraHub folder URL from the same repo/branch (this folder's URL
 -- is "<...>/staging/SilentAutoclick/", the kit lives in "<...>/staging/LyraHub/").
-local LYRAHUB_URL = BASE_URL:gsub("/SilentAutoclick/", "/LyraHub/")
-
+local MMKHUB_URL = BASE_URL:gsub("/AutoClicking/", "/MMKHub/")
 local function fetch(url, name)
     local ok, result = pcall(function()
         return game:HttpGet(url)
@@ -130,10 +129,10 @@ assert(type(config) == "table", "config.lua must return a table")
 -- then call the factory with config to get the shared helper table.
 local components = {}
 local kitOk, kitErr = pcall(function()
-    local shared = compile(fetch(LYRAHUB_URL .. "views/components/shared.lua", "shared.lua"), "shared.lua")()(config)
+    local shared = compile(fetch(MMKHUB_URL .. "views/components/shared.lua", "shared.lua"), "shared.lua")()(config)
     components.shared = shared
     for _, name in ipairs({ "button", "dropdown", "slider", "keybind", "toast", "updatecheck" }) do
-        local factory = compile(fetch(LYRAHUB_URL .. "views/components/" .. name .. ".lua", name), name)()
+        local factory = compile(fetch(MMKHUB_URL .. "views/components/" .. name .. ".lua", name), name)()
         components[name] = factory(config, shared)
     end
 end)

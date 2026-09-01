@@ -8,7 +8,7 @@ end
 
 -- 2. Konfigurasi GitHub Pribadi
 local USER = "miracle3172-Unity"
-local REPO = "AutoClicker"
+local REPO = "MMK"
 local BRANCH = "main"
 
 -- URL mengarah langsung ke root repository Anda
