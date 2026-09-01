@@ -354,6 +354,26 @@ return function(config, components)
     -- ============================================================================
     -- Dashboard page (Bawaan MMKHub)
     -- ============================================================================
+    local function label(opts)
+        local l = Instance.new("TextLabel")
+        l.Size = opts.Size or UDim2.new(0, 200, 0, 20)
+        l.Position = opts.Position or UDim2.new(0, 0, 0, 0)
+        l.AnchorPoint = opts.AnchorPoint or Vector2.new(0, 0)
+        l.BackgroundTransparency = 1
+        l.Text = opts.Text or ""
+        l.TextColor3 = opts.Color or theme.text
+        l.Font = opts.Font or Enum.Font.Gotham
+        l.TextSize = opts.TextSize or 12
+        l.TextXAlignment = opts.TextXAlignment or Enum.TextXAlignment.Left
+        l.TextYAlignment = opts.TextYAlignment or Enum.TextYAlignment.Center
+        l.TextWrapped = opts.Wrapped or false
+        l.ZIndex = opts.ZIndex or 1
+        l.Parent = opts.Parent
+        return l
+    end
+
+
+    
     local dash = makePage()
     dash.Name = "DashboardPage"
 
