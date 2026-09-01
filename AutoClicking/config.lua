@@ -5,7 +5,7 @@ return {
     -- Pengaturan Jendela Utama
     Window = {
         Title = "Hybrid Interval Clicker",
-        Subtitle = "LYRAHUB UI V2.0 · SILENT CLICK",
+        Subtitle = "MMKHub UI V2.0 · SILENT CLICK",
         Size = { X = 320, Y = 460 }, -- Lebar 320, Tinggi 460
     },
 

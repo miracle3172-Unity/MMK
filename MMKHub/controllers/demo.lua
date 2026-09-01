@@ -1,4 +1,4 @@
--- LyraHub/controllers/demo.lua
+-- MMKHub/controllers/demo.lua
 -- Controller layer: demo bindings between the component views and the
 -- observable store (two-way), plus dashboard readouts, quick actions and
 -- activity logging. This is the only layer that knows both the model and

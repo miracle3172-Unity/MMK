@@ -64,7 +64,7 @@ return function(config, components)
     shared.corner(logo, UDim.new(1, 0))
 
     local TopBarTitle = label({ Parent = TopBar, Text = "Hybrid Interval Clicker", Position = UDim2.fromOffset(34, 10), Size = UDim2.fromOffset(220, 22), TextSize = 14, Font = Enum.Font.GothamBold, Color = THEME.accent2 })
-    label({ Parent = TopBar, Text = "LYRAHUB UI V2.0", Position = UDim2.fromOffset(34, 30), Size = UDim2.fromOffset(240, 12), TextSize = 7, Color = THEME.faint, Font = Enum.Font.GothamBold })
+    label({ Parent = TopBar, Text = "MMKHub UI V2.0", Position = UDim2.fromOffset(34, 30), Size = UDim2.fromOffset(240, 12), TextSize = 7, Color = THEME.faint, Font = Enum.Font.GothamBold })
 
     local minBtn = components.button({ Parent = Main, Size = UDim2.fromOffset(28, 28), Position = UDim2.fromOffset(W - 76, 10), Text = "—", TextSize = 13, Color = THEME.panel2, TextColor = THEME.text, HoverColor = THEME.accent2, CornerRadius = UDim.new(0, 8), Glow = false })
     local closeBtn = components.button({ Parent = Main, Size = UDim2.fromOffset(28, 28), Position = UDim2.fromOffset(W - 40, 10), Text = "✕", TextSize = 12, Color = Color3.fromRGB(64, 28, 34), TextColor = THEME.danger, HoverColor = Color3.fromRGB(96, 38, 46), CornerRadius = UDim.new(0, 8), Glow = false })

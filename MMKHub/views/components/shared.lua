@@ -1,4 +1,4 @@
--- LyraHub/views/components/shared.lua
+-- MMKHub/views/components/shared.lua
 -- View layer: presentational primitives — corners, strokes, gradients, glow,
 -- soft drop shadows and tween helpers. Pure helpers; no state or business logic.
 

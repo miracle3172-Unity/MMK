@@ -1,4 +1,4 @@
--- LyraHub/models/state.lua
+-- MMKHub/models/state.lua
 -- Model layer: minimal observable state store.
 --
 -- Views never write state directly. Controllers publish via model.set() and

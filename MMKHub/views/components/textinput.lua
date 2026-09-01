@@ -1,4 +1,4 @@
--- LyraHub/views/components/textinput.lua
+-- MMKHub/views/components/textinput.lua
 -- View layer: rounded text input with placeholder, focus highlight, and a
 -- clear (×) button that appears while the field has text. Commits on focus
 -- lost. Controllers subscribe with OnChanged(value: string).

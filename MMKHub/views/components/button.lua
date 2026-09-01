@@ -1,4 +1,4 @@
--- LyraHub/views/components/button.lua
+-- MMKHub/views/components/button.lua
 -- View layer: rounded button with hover color transition + springy press
 -- animation (UIScale squish). Exposes a small controller-facing API.
 

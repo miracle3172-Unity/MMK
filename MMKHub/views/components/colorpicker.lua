@@ -1,4 +1,4 @@
--- LyraHub/views/components/colorpicker.lua
+-- MMKHub/views/components/colorpicker.lua
 -- View layer: color picker. A swatch button opens a popup with HSV sliders
 -- (hue gradient + saturation + value gradients), a live preview and hex
 -- readout, copy-to-clipboard and Done. Opens upward when it would overflow

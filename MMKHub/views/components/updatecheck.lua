@@ -1,4 +1,4 @@
--- LyraHub/views/components/updatecheck.lua
+-- MMKHub/views/components/updatecheck.lua
 -- View layer: compares the running build against the live raw config and
 -- shows a top-center "Update available" chip when GitHub is ahead. Runs
 -- non-blocking; every failure is silent (offline = no nagging).

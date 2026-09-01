@@ -1,4 +1,4 @@
--- LyraHub/views/components/keybind.lua
+-- MMKHub/views/components/keybind.lua
 -- View layer: keybind picker. Shows the current key; clicking enters capture
 -- mode ("Press any key…" with a pulsing red REC dot) and the next keyboard key
 -- is bound. Esc or clicking anywhere cancels. Controllers subscribe with

@@ -1,4 +1,4 @@
--- LyraHub/views/main.lua
+-- MMKHub/views/main.lua
 -- View layer: window chrome + three tab pages, all built from the reusable
 -- component factories in views/components/. Pure presentation — state lives
 -- in the model and behavior lives in the controllers. Controllers reach the
@@ -16,7 +16,7 @@ return function(config, components)
 
     -- ScreenGui ----------------------------------------------------------------
     local gui = Instance.new("ScreenGui")
-    gui.Name = "LyraHub_Gui"
+    gui.Name = "MMKHub_Gui"
     gui.ResetOnSpawn = false
     gui.DisplayOrder = 100
     pcall(function() gui.Parent = game:GetService("CoreGui") end)
@@ -369,7 +369,7 @@ return function(config, components)
     })
 
     label({
-        Parent = dash, Text = "LyraHub UI Kit · pure MVC demo · [K] toggles UI",
+        Parent = dash, Text = "MMKHub UI Kit · pure MVC demo · [K] toggles UI",
         Position = UDim2.fromOffset(16, 330), Size = UDim2.fromOffset(400, 12),
         TextSize = 8, Color = theme.faint,
     })
@@ -532,7 +532,7 @@ return function(config, components)
     shared.stroke(about, theme.divider, 1, 0.55)
 
     label({
-        Parent = about, Text = "LyraHub MVC UI Kit", Position = UDim2.fromOffset(16, 12),
+        Parent = about, Text = "MMKHub MVC UI Kit", Position = UDim2.fromOffset(16, 12),
         Size = UDim2.fromOffset(300, 18), TextSize = 14, Font = Enum.Font.GothamBold,
     })
     label({
@@ -541,13 +541,13 @@ return function(config, components)
         TextSize = 10, Color = theme.dim, Wrapped = true, TextYAlignment = Enum.TextYAlignment.Top,
     })
     label({
-        Parent = about, Text = "Free & open · built for LyraHub", Position = UDim2.fromOffset(16, 84),
+        Parent = about, Text = "Free & open · built for MMKHub", Position = UDim2.fromOffset(16, 84),
         Size = UDim2.fromOffset(300, 12), TextSize = 8, Color = theme.faint,
     })
 
     local unloadBtn = components.button({
         Parent = adv, Size = UDim2.fromOffset(160, 32), Position = UDim2.fromOffset(16, 300),
-        Text = "Unload LyraHub", TextSize = 12, Color = Color3.fromRGB(70, 30, 36),
+        Text = "Unload MMKHub", TextSize = 12, Color = Color3.fromRGB(70, 30, 36),
         TextColor = theme.danger, HoverColor = Color3.fromRGB(100, 42, 50), Glow = false,
     })
     label({

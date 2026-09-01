@@ -1,11 +1,11 @@
 -- SilentAutoclick/main.lua
--- Entry point: loads LyraHub's shared primitives + component factories, then
--- config, gui, core, and modules. The GUI is built with the LyraHub UI kit.
+-- Entry point: loads MMKHub's shared primitives + component factories, then
+-- config, gui, core, and modules. The GUI is built with the MMKHub UI kit.
 
 local BASE_URL = ...
 
--- Derive the LyraHub folder URL from the same repo/branch (this folder's URL
--- is "<...>/staging/SilentAutoclick/", the kit lives in "<...>/staging/LyraHub/").
+-- Derive the MMKHub folder URL from the same repo/branch (this folder's URL
+-- is "<...>/staging/SilentAutoclick/", the kit lives in "<...>/staging/MMKHub/").
 local MMKHUB_URL = BASE_URL:gsub("/AutoClicking/", "/MMKHub/")
 local function fetch(url, name)
     local ok, result = pcall(function()
@@ -67,14 +67,14 @@ local function showErrorGui(msg)
     task.delay(15, function() pcall(function() errGui:Destroy() end) end)
 end
 
--- Pre-kit fallback status hint: only used when the LyraHub kit itself failed
+-- Pre-kit fallback status hint: only used when the MMKHub kit itself failed
 -- to load (you can't show the kit toast when the kit link is down). At
 -- runtime, notifications go through the kit toast component (gui.Toast).
 local function showKitToast(msg)
     local Players = game:GetService("Players")
     local lp = Players.LocalPlayer
     local toastGui = Instance.new("ScreenGui")
-    toastGui.Name = "LyraHubKitToast"
+    toastGui.Name = "MMKHubKitToast"
     toastGui.ResetOnSpawn = false
     toastGui.DisplayOrder = 9998
     pcall(function() toastGui.Parent = game:GetService("CoreGui") end)
@@ -120,11 +120,11 @@ local function showKitToast(msg)
     task.delay(12, function() pcall(function() toastGui:Destroy() end) end)
 end
 
--- 1. Config (LyraHub shape: Window / Keys / Theme / ComponentDefaults)
+-- 1. Config (MMKHub shape: Window / Keys / Theme / ComponentDefaults)
 local config = compile(fetch(BASE_URL .. "config.lua", "config.lua"), "config.lua")()
 assert(type(config) == "table", "config.lua must return a table")
 
--- 2. LyraHub UI kit (shared primitives + component factories)
+-- 2. MMKHub UI kit (shared primitives + component factories)
 -- shared.lua returns function(theme): call the chunk to get the factory,
 -- then call the factory with config to get the shared helper table.
 local components = {}
@@ -137,8 +137,8 @@ local kitOk, kitErr = pcall(function()
     end
 end)
 if not kitOk then
-    warn("[LyraHub] Kit load failed: " .. tostring(kitErr))
-    showKitToast("LyraHub UI kit failed to load from the raw GitHub link.\nPush the latest LyraHub/ folder to GitHub, then re-run.")
+    warn("[MMKHub] Kit load failed: " .. tostring(kitErr))
+    showKitToast("MMKHub UI kit failed to load from the raw GitHub link.\nPush the latest MMKHub/ folder to GitHub, then re-run.")
     return
 end
 

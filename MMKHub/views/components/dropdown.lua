@@ -1,4 +1,4 @@
--- LyraHub/views/components/dropdown.lua
+-- MMKHub/views/components/dropdown.lua
 -- View layer: dropdown with smooth open/close (height + fade + scale) and a
 -- rotating chevron. Controllers subscribe with OnSelected.
 

@@ -1,4 +1,4 @@
--- LyraHub/controllers/main.lua
+-- MMKHub/controllers/main.lua
 -- Controller layer: window chrome behavior — drag, minimize/expand, hide
 -- keybind, tab switching, and full teardown. Pure orchestration; it never
 -- touches component internals and drives the window purely through the

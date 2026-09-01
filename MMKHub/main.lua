@@ -1,4 +1,4 @@
--- LyraHub/main.lua
+-- MMKHub/main.lua
 -- Composition root. Fetches + compiles every module in MVC order and builds
 -- the dependency graph:
 --
@@ -31,7 +31,7 @@ local function showErrorGui(msg)
     local Players = game:GetService("Players")
     local lp = Players.LocalPlayer
     local errGui = Instance.new("ScreenGui")
-    errGui.Name = "LyraHub_Error"
+    errGui.Name = "MMKHub_Error"
     errGui.ResetOnSpawn = false
     errGui.DisplayOrder = 9999
     pcall(function() errGui.Parent = game:GetService("CoreGui") end)
@@ -54,7 +54,7 @@ local function showErrorGui(msg)
     lbl.Size = UDim2.new(1, -20, 1, -20)
     lbl.Position = UDim2.new(0, 10, 0, 10)
     lbl.BackgroundTransparency = 1
-    lbl.Text = "LyraHub Error:\n" .. tostring(msg)
+    lbl.Text = "MMKHub Error:\n" .. tostring(msg)
     lbl.TextColor3 = Color3.fromRGB(255, 100, 100)
     lbl.Font = Enum.Font.GothamBold
     lbl.TextSize = 12

@@ -1,4 +1,4 @@
--- LyraHub/views/components/toast.lua
+-- MMKHub/views/components/toast.lua
 -- View layer: animated, stackable notification toasts (info / warn / error /
 -- success). They render into a bottom-center stack, slide in, auto-fade out,
 -- and dismiss on click. Creates its own ScreenGui when none is given, so any

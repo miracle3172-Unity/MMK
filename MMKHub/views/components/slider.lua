@@ -1,4 +1,4 @@
--- LyraHub/views/components/slider.lua
+-- MMKHub/views/components/slider.lua
 -- View layer: draggable slider — horizontal or vertical. Knob + fill track the
 -- ratio (0..1). Controllers subscribe with OnChanged.
 

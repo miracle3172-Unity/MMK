@@ -1,14 +1,14 @@
--- LyraHub/config.lua
+-- MMKHub/config.lua
 -- Model layer: theme palette + window/default settings.
 --
--- LyraHub UI kit uses a very dark blue / charcoal palette, white and muted
+-- MMKHub UI kit uses a very dark blue / charcoal palette, white and muted
 -- blue text, and black/dark-grey accents with subtle transparency and glow.
 
 local accentColor = Color3.fromRGB(118, 140, 185) -- shared by Theme + Defaults.tint
 
 return {
     Window = {
-        Title = "LyraHub",
+        Title = "MMKHub",
         Subtitle = "MVC UI Kit v1.2",
         Size = Vector2.new(620, 420), -- IndoVoice-style wide layout
     },

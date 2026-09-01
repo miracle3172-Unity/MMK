@@ -1,4 +1,4 @@
--- LyraHub/views/components/toggle.lua
+-- MMKHub/views/components/toggle.lua
 -- View layer: pill toggle switch. The knob slides with a smooth tween and the
 -- track cross-fades between off/on colors. Controllers subscribe with OnChanged.
 
