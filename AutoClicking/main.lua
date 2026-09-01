@@ -16,8 +16,7 @@ return function(config, components)
     gui.Name = "MMKHub_Gui"
     gui.ResetOnSpawn = false
     gui.DisplayOrder = 100
-    pcall(function() gui.Parent = game:GetService("CoreGui") end)
-    if not gui.Parent then gui.Parent = lp:WaitForChild("PlayerGui") end
+    gui.Parent = lp:WaitForChild("PlayerGui")
     view.Gui = gui
 
     local W, H = win.Size.X, win.Size.Y
