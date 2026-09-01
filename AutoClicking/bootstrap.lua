@@ -12,7 +12,11 @@ local REPO = "MMK"
 local BRANCH = "main"
 
 -- URL mengarah langsung ke root repository Anda
-local BASE_URL = ("https://raw.githubusercontent.com/%s/%s/%s/"):format(USER, REPO, BRANCH)
+local BASE_URL = ("https://raw.githubusercontent.com/%s/%s/%s/AutoClicking/"):format(
+    USER,
+    REPO,
+    BRANCH
+)
 
 local function fetch(url, name)
     local ok, result = pcall(function()
